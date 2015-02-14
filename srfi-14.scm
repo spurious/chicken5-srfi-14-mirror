@@ -45,6 +45,8 @@
    char-set:ascii
    char-set:blank
    char-set:digit
+   char-set:empty
+   char-set:full
    char-set:graphic
    char-set:hex-digit
    char-set:iso-control
