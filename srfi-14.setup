@@ -7,4 +7,4 @@
 (install-extension
  'srfi-14
  '("srfi-14.so" "srfi-14.import.so" "srfi-14.o" "srfi-14.types")
- '((version "1.0")))
+ '((version "1.1")))

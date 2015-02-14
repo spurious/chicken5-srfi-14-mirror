@@ -1000,4 +1000,5 @@ preserves its copyright:
 
 === Version History
 
+; 1.1 : Add missing char-sets to export list.
 ; 1.0 : Taken from the srfi-14 core library unit and released as an egg for CHICKEN 5.
