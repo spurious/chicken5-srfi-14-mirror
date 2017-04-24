@@ -4,4 +4,4 @@
  (maintainer "The CHICKEN Team")
  (category data)
  (license "BSD")
- (components (extension srfi-14)))
+ (components (extension srfi-14 (types-file))))
