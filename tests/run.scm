@@ -1,7 +1,7 @@
 ;;; This is a regression testing suite for the SRFI-14 char-set library.
 ;;; Olin Shivers
 
-(use srfi-14)
+(import srfi-14)
 
 (let-syntax ((test (syntax-rules ()
                      ((test form ...)
