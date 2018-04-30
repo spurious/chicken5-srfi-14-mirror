@@ -70,7 +70,10 @@
    ucs-range->char-set
    ucs-range->char-set!)
 
-(import scheme chicken)
+(import (scheme)
+        (chicken base)
+        (chicken fixnum)
+        (chicken platform))
 
 (register-feature! 'srfi-14)
 
