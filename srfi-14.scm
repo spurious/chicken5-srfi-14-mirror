@@ -258,8 +258,8 @@
 
 (define (char-set-hash cs . maybe-bound)
   (let ((bound (optional maybe-bound 4194304)))
+    (##sys#check-fixnum bound 'char-set-hash)
     (if (zero? bound) (set! bound 4194304))
-    (##sys#check-exact bound 'char-set-hash)
     (let* ((s (%char-set:s/check cs 'char-set-hash))
            ;; Compute a 111...1 mask that will cover BOUND-1:
            (mask (let lp ((i #x10000))  ; Let's skip first 16 iterations, eh?
@@ -336,7 +336,7 @@
 (define (char-set-ref cset cursor) (%latin1->char cursor))
 
 (define (char-set-cursor-next cset cursor)
-  (##sys#check-exact cursor 'char-set-cursor-next)
+  (##sys#check-fixnum cursor 'char-set-cursor-next)
 ;  (check-arg (lambda (i) (and (integer? i) (exact? i) (<= 0 i 255))) cursor
 ;            char-set-cursor-next)
   (%char-set-cursor-next cset cursor 'char-set-cursor-next))
@@ -483,8 +483,8 @@
 ;;; -- UCS-range -> char-set
 
 (define (%ucs-range->char-set! lower upper error? bs proc)
-  (##sys#check-exact lower proc)
-  (##sys#check-exact upper proc)
+  (##sys#check-fixnum lower proc)
+  (##sys#check-fixnum upper proc)
 ;  (check-arg (lambda (x) (and (integer? x) (exact? x) (<= 0 x))) lower proc)
 ;  (check-arg (lambda (x) (and (integer? x) (exact? x) (<= lower x))) upper proc)
 
